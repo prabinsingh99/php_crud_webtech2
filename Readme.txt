@@ -1,15 +1,14 @@
 How to run this script
 
-1.Download the zip file
 
-2.Extract the file and copy "php_crud_webtech2" folder
+1.copy "php_crud_webtech2" folder
 
-3.Paste inside root directory(for xampp xampp/htdocs, for wamp wamp/www, for lamp var/www/html)
+2.Paste inside root directory(for xampp xampp/htdocs, for wamp wamp/www, for lamp var/www/html)
 
-4.Open PHPMyAdmin (http://localhost/phpmyadmin)
+3.Open PHPMyAdmin (http://localhost/phpmyadmin)
 
-5.Create a database with name mithila_db
+4.Create a database with name mithila_db
 
-6.Import phpcrud.sql file(given inside the zip package in SQL file folder)
+5.Import phpcrud.sql file(given inside the zip package in SQL file folder)
 
-7.Run the script http://localhost/php_crud_webtech2
+6.Run the script http://localhost/php_crud_webtech2
