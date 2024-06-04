@@ -1,4 +1,7 @@
 <?php
+
+include('adminsession.php');
+
 //database conection  file
 include('dbconnection.php');
 //Code for deletion
@@ -10,6 +13,8 @@ echo "<script>alert('Data deleted');</script>";
 echo "<script>window.location.href = 'index.php'</script>";     
 } 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,10 +173,21 @@ table.table td i {
                     <div class="col-sm-5">
                         <h2>User <b>Management</b></h2>
                     </div>
-                       <div class="col-sm-7" align="right">
+                    <div class="col-sm-7" align="right">
                         <a href="insert.php" class="btn btn-secondary"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-                                        
                     </div>
+                    <form method="post">
+                    <div class="col-sm-7" align="right">
+                        <button name="logoutbtn">Logout</button>
+                    </div>
+                    </form>
+
+                    <?php
+                    if(isset($_POST['logoutbtn'])){
+                    session_destroy();
+                    }
+                    ?>
+                    
                 </div>
             </div>
             <table class="table table-striped table-hover">

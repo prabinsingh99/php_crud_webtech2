@@ -1,4 +1,5 @@
 <?php 
+include('adminsession.php');
 //Database Connection
 include('dbconnection.php');
 if(isset($_POST['submit']))
@@ -16,15 +17,17 @@ if(isset($_POST['submit']))
      
     if ($query) {
     echo "<script>alert('You have successfully updated your information');</script>";
-    echo "<script type='text/javascript'> document.location ='index.php'; </script>";
+    echo "<script type='text/javascript'> document.location ='admindash.php'; </script>";
   }
   else
     {
       echo "<script>alert('Something Went Wrong. Please try again');</script>";
-	  echo "<script type='text/javascript'> document.location ='index.php'; </script>";
+	  echo "<script type='text/javascript'> document.location ='admindash.php'; </script>";
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,7 +164,7 @@ while ($row=mysqli_fetch_array($ret)) {
         </div>
     </form>
 
-	<div class="text-center">Not now!!  <a href="index.php">Back to main menu</a></div>
+	<div class="text-center">Not now!!  <a href="admindash.php">Back to main menu</a></div>
 
 </div>
 </body>

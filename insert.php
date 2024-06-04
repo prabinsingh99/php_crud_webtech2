@@ -1,6 +1,10 @@
 <?php 
+
+include('adminsession.php');
+
 //Databse Connection file
 include('dbconnection.php');
+
 if(isset($_POST['submit']))
   {
   	//getting the post values
@@ -14,7 +18,7 @@ if(isset($_POST['submit']))
      $query=mysqli_query($con, "insert into users(FirstName,LastName, MobileNumber, Email, Address) value('$fname','$lname', '$contno', '$email', '$add' )");
     if ($query) {
     echo "<script>alert('You have successfully inserted the data');</script>";
-    echo "<script type='text/javascript'> document.location ='index.php'; </script>";
+    echo "<script type='text/javascript'> document.location ='admindash.php'; </script>";
   }
   else
     {
@@ -23,6 +27,8 @@ if(isset($_POST['submit']))
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,7 +158,7 @@ body {
             <button type="submit" class="btn btn-success btn-lg btn-block" name="submit">Submit</button>
         </div>
     </form>
-	<div class="text-center">View Aready Inserted Data!!  <a href="index.php">View</a></div>
+	<div class="text-center">View Aready Inserted Data!!  <a href="admindash.php">View</a></div>
 </div>
 </body>
 </html>
