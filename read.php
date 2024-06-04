@@ -1,6 +1,8 @@
 <?php
 include('dbconnection.php');
+include('adminsession.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -161,7 +163,7 @@ table.table td i {
 
                         </div>
                        <div class="col-sm-7" align="right">
-                        <a href="index.php" class="btn btn-secondary"> <span>Main Menu</span></a>
+                        <a href="admindash.php" class="btn btn-secondary"> <span>Main Menu</span></a>
                                         
                     </div>
                     </div>
